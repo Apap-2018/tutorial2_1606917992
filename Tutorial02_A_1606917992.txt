@@ -1,0 +1,68 @@
+Raihan Mahendra Sutanto
+1606917992
+APAP - A
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+LATIHAN PROJECT VIRAL
+1. Mengganti baris @RequestMapping(“/viral”) menjadi @RequestMapping(“/viral2jari”).
+   a. Tidak terjadi compile error.
+   b. localhost:8080/viral tiadk dapat ditemukan. Karena alamat tersebut tidak
+      diketahui.
+   c. @RequestMapping("/viral") merupakan anotasi untuk mapping suatu web request
+      Spring Controller method.
+
+2. Mengganti nama method index() menjadi viral()
+   a. Tidak terjadi compile error.
+   b. Halaman localhost:8080/viral terbuka seperti biasa, karena nama fungsi tidak
+      mempengaruhi mapping. Yang terpenting adalah mapping dari @RequestMapping
+
+3. Mengganti string return type menjadi return "viral2jari"
+   a. Tidak terjadi compile error.
+   b. localhost:8080/viral tidak bisa diakses karena template bernama viral2jari
+      tidak ditemukan.
+   c. Menampilkan template dengan nama string returnnya.
+
+-------------------------------------------------------------------------------------
+
+LATIHAN REQUEST PARAMETER
+1. Karena adanya thymeleaf dimana "In My Feeling" akan di subtitusi dengan kalimat
+   yang ada di dalam attribute th:text.
+
+2. Ketika mengakses localhost:8080/challenge?name=kiki tidak bisa diakses
+   (whitelabel error page). Namun akan bisa diakses lewat
+   http://localhost:8080/viral/challenge?name=kiki
+
+3. Akses localhost:8080/challenge
+   a. Terjadi Whitelabel Error Page, karena tidak terdapat parameter string
+      bernama 'name'.
+   b. Bisa diakses, namun parameter nama bernilai null. Sehingga kalimatnya menjadi
+      'null do you love me?'
+   c. Bisa diakses dan menampilkan 'kiki do you love me?'. Karena parameter 'name'
+      memiliki default value "kiki".
+
+-------------------------------------------------------------------------------------
+
+LATIHAN PATH VARIABLE
+1. Ketika mengakses localhost:8080/challenge/ terjadi error karena tidak terdapat
+   parameter string 'name'.
+
+2. Saat saya coba akses localhost:8080/challenge/ untuk pertama kali terjadi error
+   yang dikarenakan adanya ambiguitas mapping. Lalu setelah saya coba menghapus
+   fungsi challenge (fungsi yang dibuat pada latihan request parameter), maka akan
+   menampilkan "KB do you love me?" karena masuk pada else di fungsi challengePath.
+
+3. Bisa diakses dan menampilkan 'kiki do you love me?"
+
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
